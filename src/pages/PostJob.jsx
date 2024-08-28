@@ -1,5 +1,5 @@
 const PostJob = () => {
-  return <div></div>;
+  return <div>PostJob</div>;
 };
 
 export default PostJob;
