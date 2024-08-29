@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { PenBox, ScanSearch, UserPen, UserSearch } from "lucide-react";
 
 const LandingPage = () => {
   return (
@@ -38,11 +39,13 @@ const LandingPage = () => {
       <div className="flex gap-6 justify-center">
         <Link to={"/jobs"}>
           <Button variant="blue" size="xl">
+            <ScanSearch className="mr-3" size={30} />
             Find Jobs
           </Button>
         </Link>
         <Link to={"/post-job"}>
           <Button variant="destructive" size="xl">
+            <PenBox className="mr-3" size={30} />
             Post a Job
           </Button>
         </Link>
@@ -73,18 +76,33 @@ const LandingPage = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardHeader>
-            <CardTitle className="font-bold">For Job Seekers</CardTitle>
+            <CardTitle className="font-bold">
+              <div className="flex">
+                <UserSearch className="mr-2" />
+                For Job Seekers
+              </div>
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            Search and apply for jobs, track applications, and more.
+            Discover job opportunities, apply seamlessly, and monitor your
+            application progress—all in one place. Take control of your job
+            search with personalized recommendations, real-time updates, and
+            tools to help you succeed.
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="font-bold">For Employers</CardTitle>
+            <CardTitle className="font-bold">
+              <div className="flex">
+                <UserPen className="mr-2" />
+                For Employers
+              </div>
+            </CardTitle>
           </CardHeader>
           <CardContent>
-            Post jobs, manage applications, and find the best candidates.
+            Post job listings, efficiently manage applications, and connect with
+            top talent. Streamline your hiring process with WorkHive tools
+            designed to help you find the best candidates quickly and easily.
           </CardContent>
         </Card>
       </section>
